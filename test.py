@@ -1,5 +1,5 @@
 #import types
-from django.db import models
+#from django.db import models
 
 import pandas as pd
 a=[1,2,4]
