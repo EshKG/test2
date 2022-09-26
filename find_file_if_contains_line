@@ -1,0 +1,14 @@
+import os
+import pandas as pd
+import os.path
+
+path1="/opt/reports/"
+files = os.listdir(path=path1)
+for file in files:
+    if os.path.isdir("{}{}".format(path1,file))==False and ".py" in file:
+        with open(file,"r",encoding='utf-8',errors='ignore') as f:
+            read = f.readlines()
+            #print(read)
+            for line in read:
+                if "noreply2" in line:
+                    print("В этом файле",f)
